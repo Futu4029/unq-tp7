@@ -1,0 +1,40 @@
+Ejercicio 1 - Lea el pattern Template Method y...
+1. Utilizando las ideas propuestas por el pattern y responda:
+a. ¿Dónde se define el esqueleto del algoritmo?
+b. ¿Se puede redefinir el esqueleto?
+c. ¿Qué es lo que se puede redefinir?
+d. ¿Qué es un hook method?
+
+1.a. El esqueleto esta predefinido y conforma uno de los 23 patrones de diseños preestablecidos.
+  b. No se puede redefinir el esqueleto. La manera en que se aplica varía pero el esqueleto del 
+     diseño no se modifica.
+  c. Se pueden redefinir las operaciones primitivas, es decir métodos abstractos que se redefinen en las clases hijas.
+  d. Un hook method es un método que se redefine en la clase hija, detallando la funcionalidad de un método de la superclase.
+
+  
+Ejercicio 2. Roles: Definimos la clase empleados como superclase y los tipos como subclases. 
+Definimos sueldo como método primitivo y se define como un método concreto en cada subclase.
+
+Ejercicio 4.
+Template method: Es toda la estructura aplicada, el diseño implmentado, el esqueleto.
+Operacion primitiva: esHoraPico en la superclase
+Operación Concreta: esHoraPico  en la subclase
+Hook method: costoNeto se define en la super y se redefine en la subclase.
+
+Ejercicio 5.
+Clase abstracta: CuentaBancaria
+Clases concretas: CajaDeAhorro, CuentaCorriente
+Template Method: extraer
+operacion primitiva: validarExtraccion en la superclase
+operacion concreta: validarExtraccion en la subclase
+Hoo method: no tiene
+
+Ejercicio 6.
+1. Si existen 2 tipos. Un adaptador de clases y un adaptador de objetos.
+2. El adaptador de objetos permite que un adapter trabaje con muchos adaptees -> el adapter y las subclases. Es un adaptador más independentiente
+El adaptador de clases adapta adaptee a target encargando a una clase adaptee concreta. Esto lo vuelve un adaptador rigido.
+3. Se pueden utilizar ambas, la diferencia va a estar a la hora de agregar más objetos el adaptador de objetos puede llegar a 
+servir, en cambio el adaptador de clases no.
+4. El patrón adapter en este caso implementa la interfaz elements()(target), 
+la clase vector lo implementa con el mismo nombre adaptando los elementos de su clase devolviendo una lista enumerativa.
+5. De acuerdo al mismo análisis, se mantiene el patrón de adapter de clase, donde el adaptee es iterator() y el método iterator de arraylist es el adaptador.
